@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "666555445368",
+    "project_id": "taniyuk-4c2ac",
+    "storage_bucket": "taniyuk-4c2ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666555445368:android:44417f42970f82d2befd8d",
+        "android_client_info": {
+          "package_name": "com.example.tanikyukv2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "666555445368-0trl6v9gpcmndtaun597opthncs462dn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNNUeOnS9YTIZXWgLGxCcjiIaP6G4pzAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "666555445368-0trl6v9gpcmndtaun597opthncs462dn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
