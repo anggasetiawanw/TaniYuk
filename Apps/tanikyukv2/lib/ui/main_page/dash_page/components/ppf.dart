@@ -6,10 +6,10 @@ import '../../../../size_config.dart';
 
 class PPF extends StatelessWidget {
   const PPF({
-    Key key,
+    Key? key,
     this.text,
   }) : super(key: key);
-  final String text;
+  final String? text;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -41,9 +41,9 @@ class PPF extends StatelessWidget {
             flex: 2,
           ),
           Text(
-            text,
+            text!,
             style: TextStyle(
-                fontSize: getProportionateScreenHeight(30),
+                fontSize: getProportionateScreenHeight(20),
                 color: Colors.white,
                 fontFamily: "poppins",
                 fontWeight: FontWeight.bold),
@@ -54,7 +54,7 @@ class PPF extends StatelessWidget {
           Align(
             alignment: Alignment.bottomLeft,
             child: Text(
-              "PPF",
+              "Lux",
               style: TextStyle(
                   fontSize: getProportionateScreenHeight(16),
                   color: Colors.white,

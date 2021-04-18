@@ -6,11 +6,11 @@ import '../../../../size_config.dart';
 
 class SuhuKelembaban extends StatelessWidget {
   const SuhuKelembaban({
-    Key key,
+    Key? key,
     this.suhu,
     this.kel,
   }) : super(key: key);
-  final String suhu, kel;
+  final String? suhu, kel;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -36,7 +36,7 @@ class SuhuKelembaban extends StatelessWidget {
             height: getProportionateScreenHeight(40),
           ),
           Text(
-            suhu,
+            suhu!,
             style: TextStyle(
                 fontSize: getProportionateScreenHeight(15),
                 color: Colors.white,
@@ -55,7 +55,7 @@ class SuhuKelembaban extends StatelessWidget {
             height: getProportionateScreenHeight(40),
           ),
           Text(
-            kel,
+            kel!,
             style: TextStyle(
                 fontSize: getProportionateScreenHeight(15),
                 color: Colors.white,

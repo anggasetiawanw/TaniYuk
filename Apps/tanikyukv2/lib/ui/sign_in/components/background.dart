@@ -4,9 +4,9 @@ import '../../../size_config.dart';
 import 'dart:ui';
 
 class Background extends StatelessWidget {
-  final Widget child;
+  final Widget? child;
   const Background({
-    Key key, this.child,
+    Key? key, this.child,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -74,7 +74,7 @@ class Background extends StatelessWidget {
               ],
             ),
           ),
-          child,
+          child!,
         ],
       ),
     );

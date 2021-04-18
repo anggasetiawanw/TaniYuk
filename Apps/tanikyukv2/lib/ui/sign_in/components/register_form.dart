@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:provider/provider.dart';
 import 'package:tanikyukv2/services/auth_firebase.dart';
 //import 'package:tanikyukv2/ui/main_page/main_page.dart';
 import '../../../size_config.dart';
 
 class RegisterForm extends StatefulWidget {
   const RegisterForm({
-    Key key,
+    Key? key,
   }) : super(key: key);
   @override
   _RegisterFormState createState() => _RegisterFormState();
@@ -92,9 +93,11 @@ class _RegisterFormState extends State<RegisterForm> {
                       child: InkWell(
                         borderRadius: BorderRadius.circular(20),
                         splashColor: Color(0x0fFFCD00),
-                        onTap: () async {
-                          await AuthServices.signUp(
-                              registesEmail.text, registesPassword.text);
+                        onTap: ()  {
+                          context.read<AuthServices>().signUp(
+                                registesEmail.text,
+                                registesPassword.text,context
+                              );
                         },
                         child: Center(
                             child: Text(

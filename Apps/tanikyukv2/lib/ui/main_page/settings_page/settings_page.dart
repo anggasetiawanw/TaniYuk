@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tanikyukv2/services/auth_firebase.dart';
+import 'package:provider/provider.dart';
 
 class SettingsPage extends StatefulWidget {
   @override
@@ -13,8 +14,11 @@ class _SettingsPageState extends State<SettingsPage> {
       child: Center(
         child: ElevatedButton(
           child: Text("Sign Out"),
-          onPressed: () async {
-            await AuthServices.signOut();
+          onPressed: () {
+            context.read<AuthServices>().signOut();
+            if (Navigator.of(context).canPop()) {
+              Navigator.of(context).pop();
+            }
           },
         ),
       ),

@@ -8,7 +8,15 @@ class Wrapper extends StatelessWidget {
   static String routeName = "/wrapper";
   @override
   Widget build(BuildContext context) {
-    final user = Provider.of<User>(context);
-    return (user == null) ? SignInScreen() : MainPage();
+    final user = context.watch<User?>();
+    if (user != null) {
+      print("User Already Signed In");
+      return MainPage();
+    }
+    return SignInScreen();
+    // return Provider<User>(
+    //   create: (_) => AuthServices.user(),
+
+    // );
   }
 }

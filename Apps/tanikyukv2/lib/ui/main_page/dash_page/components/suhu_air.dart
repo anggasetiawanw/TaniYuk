@@ -6,9 +6,9 @@ import '../../../../size_config.dart';
 
 class SuhuAir extends StatelessWidget {
   const SuhuAir({
-    Key key, this.suhuAir,
+    Key? key, this.suhuAir,
   }) : super(key: key);
-  final String suhuAir;
+  final String? suhuAir;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -49,7 +49,7 @@ class SuhuAir extends StatelessWidget {
                 flex: 1,
               ),
               Text(
-                suhuAir,
+                suhuAir!,
                 style: TextStyle(
                     fontSize: getProportionateScreenHeight(40),
                     color: Colors.white,

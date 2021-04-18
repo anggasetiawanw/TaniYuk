@@ -4,9 +4,9 @@ import '../../../../constants.dart';
 import '../../../../size_config.dart';
 
 class Background extends StatelessWidget {
-  final Widget child;
+  final Widget? child;
   const Background({
-    Key key,
+    Key? key,
     this.child,
   }) : super(key: key);
 
@@ -30,7 +30,7 @@ class Background extends StatelessWidget {
               top: 0,
               right: 0,
               child: Image.asset("assets/images/ujung_kanan.png")),
-          child,
+          child!,
         ],
       ),
     );

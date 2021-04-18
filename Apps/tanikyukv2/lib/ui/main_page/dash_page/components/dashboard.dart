@@ -27,7 +27,7 @@ class DashBoard extends StatelessWidget {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Text("Loading");
         }
-        var data = snapshot.data;
+        var data = snapshot.data!;
         return Container(
           //width: double.infinity,
           height: getProportionateScreenHeight(370),

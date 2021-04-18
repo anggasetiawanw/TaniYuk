@@ -5,9 +5,9 @@ import '../../../../size_config.dart';
 
 class TDS extends StatelessWidget {
   const TDS({
-    Key key, this.text,
+    Key? key, this.text,
   }) : super(key: key);
-  final String text;
+  final String? text;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -48,7 +48,7 @@ class TDS extends StatelessWidget {
                 flex: 1,
               ),
               Text(
-                text,
+                text!,
                 style: TextStyle(
                     fontSize: getProportionateScreenHeight(40),
                     color: Colors.white,

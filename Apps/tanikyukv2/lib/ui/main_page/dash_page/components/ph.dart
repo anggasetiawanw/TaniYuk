@@ -5,9 +5,9 @@ import '../../../../size_config.dart';
 
 class PH extends StatelessWidget {
   const PH({
-    Key key, this.text,
+    Key? key, this.text,
   }) : super(key: key);
-  final String text;
+  final String? text;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -44,7 +44,7 @@ class PH extends StatelessWidget {
             ),
           ),
           Text(
-            text,
+            text!,
             style: TextStyle(
                 fontSize: getProportionateScreenHeight(40),
                 color: Colors.white,

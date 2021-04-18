@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tanikyukv2/services/auth_firebase.dart';
-
+import 'package:provider/provider.dart';
 import '../../../size_config.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({
-    Key key,
+    Key? key,
   }) : super(key: key);
   @override
   _LoginFormState createState() => _LoginFormState();
@@ -84,9 +84,9 @@ class _LoginFormState extends State<LoginForm> {
                       child: InkWell(
                         borderRadius: BorderRadius.circular(20),
                         splashColor: Color(0x0fFFCD00),
-                        onTap: () async {
-                          await AuthServices.signIn(
-                              signInEmail.text, signInPassword.text);
+                        onTap: () {
+                          context.read<AuthServices>().signIn(
+                              signInEmail.text, signInPassword.text, context);
                         },
                         child: Center(
                             child: Text(

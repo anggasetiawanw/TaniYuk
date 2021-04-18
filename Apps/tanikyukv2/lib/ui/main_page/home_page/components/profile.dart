@@ -4,12 +4,12 @@ import '../../../../size_config.dart';
 
 class Profile extends StatelessWidget {
   const Profile({
-    Key key,
+    Key? key,
     this.image,
     this.nama,
     this.owner,
   }) : super(key: key);
-  final String image, nama, owner;
+  final String? image, nama, owner;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,7 +20,7 @@ class Profile extends StatelessWidget {
             child: CircleAvatar(
               radius: 40,
               backgroundColor: Colors.transparent,
-              backgroundImage: AssetImage(image),
+              backgroundImage: AssetImage(image!),
             ),
           ),
           SizedBox(
@@ -28,14 +28,14 @@ class Profile extends StatelessWidget {
           ),
           Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Spacer(),
-            Text(nama,
+            Text(nama!,
                 style: TextStyle(
                     fontFamily: "poppins",
                     fontSize: getProportionateScreenHeight(20),
                     color: Colors.white,
                     fontWeight: FontWeight.bold)),
             Text(
-              owner,
+              owner!,
               textAlign: TextAlign.left,
               style: TextStyle(
                 fontFamily: "poppins",

@@ -6,7 +6,7 @@ import '../../../../size_config.dart';
 
 class Waktu extends StatelessWidget {
   const Waktu({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

@@ -50,7 +50,7 @@ class _BodyState extends State<Body> {
             Expanded(
               flex: 3,
               child: Container(
-                width: double.infinity,
+                //width: double.infinity,
                 margin: EdgeInsets.fromLTRB(
                     getProportionateScreenWidth(20),
                     0,
@@ -231,7 +231,7 @@ class _BodyState extends State<Body> {
                         Container(
                           margin: EdgeInsets.fromLTRB(30, 5, 30, 0),
                           child: Image.asset("assets/images/bawah_hp1.png",
-                              height: getProportionateScreenHeight(165)),
+                              height: getProportionateScreenHeight(140)),
                         )
                       ],
                     )
@@ -245,7 +245,7 @@ class _BodyState extends State<Body> {
     );
   }
 
-  AnimatedContainer buildDots({int index}) {
+  AnimatedContainer buildDots({int? index}) {
     return AnimatedContainer(
       duration: kAnimationDuration,
       margin: EdgeInsets.only(right: 5),

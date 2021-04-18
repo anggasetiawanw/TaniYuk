@@ -4,10 +4,10 @@ import '../../../../size_config.dart';
 
 class CnBar extends StatelessWidget {
   const CnBar({
-    Key key,
+    Key? key,
     this.text,
   }) : super(key: key);
-  final String text;
+  final String? text;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,7 +26,7 @@ class CnBar extends StatelessWidget {
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         Icon(Icons.apartment),
         Text(
-          text,
+          text!,
           style: TextStyle(
               fontSize: getProportionateScreenHeight(15), color: Colors.black),
         )

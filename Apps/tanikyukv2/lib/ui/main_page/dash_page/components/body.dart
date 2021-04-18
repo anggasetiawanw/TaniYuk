@@ -54,7 +54,7 @@ class _BodyState extends State<Body> {
             Expanded(
               flex: 3,
               child: Container(
-                width: double.infinity,
+                // width: double.infinity,
                 margin: EdgeInsets.fromLTRB(
                     getProportionateScreenWidth(20),
                     0,
@@ -105,7 +105,7 @@ class _BodyState extends State<Body> {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Calender(),
+                      //TableBasicsExample(),
                       Container(
                         // width: double.infinity,
                         height: getProportionateScreenHeight(40),
@@ -117,8 +117,8 @@ class _BodyState extends State<Body> {
                         child: Row(
                           children: [
                             CnBar(text: "01"),
-                            CnBar(text: "02"),
-                            CnBar(text: "03"),
+                            // CnBar(text: "02"),
+                            // CnBar(text: "03"),
                             Spacer(),
                             Container(
                                 margin: EdgeInsets.fromLTRB(
@@ -153,7 +153,7 @@ class _BodyState extends State<Body> {
     );
   }
 
-  AnimatedContainer buildDots({int index}) {
+  AnimatedContainer buildDots({int? index}) {
     return AnimatedContainer(
       duration: kAnimationDuration,
       margin: EdgeInsets.only(right: 5),
